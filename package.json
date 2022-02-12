@@ -1,0 +1,36 @@
+{
+  "name": "basetab",
+  "version": "2.0.0",
+  "description": "Browser Startpage",
+  "scripts": {
+    "clean": "rimraf public src/css/styles.css",
+    "dev": "npm run clean && postcss src/css/tailwind.css > src/css/styles.css && eleventy --serve",
+    "build": "npm run clean && NODE_ENV=production postcss src/css/tailwind.css > src/css/styles.css && eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://shouhu21@github.com/shouhu21/basetab.git"
+  },
+  "keywords": [
+    "eleventy",
+    "11ty",
+    "tailwind",
+    "tailwindcss",
+    "purgecss"
+  ],
+  "author": "Luis Steidle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shouhu21/basetab/issues"
+  },
+  "homepage": "https://github.com/shouhu21/basetab#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0",
+    "autoprefixer": "10.2.5",
+    "cssnano": "5.0.2",
+    "postcss": "8.2.15",
+    "postcss-cli": "8.3.1",
+    "rimraf": "3.0.2",
+    "tailwindcss": "^2.2.19"
+  }
+}

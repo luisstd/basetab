@@ -1,0 +1,56 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.app {
+  position: relative;
+  top: 10%;
+  border: 0.3rem solid black;
+  border-radius: 1px;
+  padding: 1.2rem;
+  color: hsl(243, 80%, 62%);
+  background-color: white;
+  @apply dark:bg-black dark:border-white;
+}
+
+.app::after {
+  z-index: -5;
+  content: "";
+  position: absolute;
+  border: 0.3rem solid #e95379;
+  border-radius: 1px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #e95379;
+  transition: all 0.25s ease-in-out;
+}
+
+.app:active,
+.app:focus {
+  border: 0.3rem dashed #e95379;
+  border-radius: 1px;
+}
+
+.link:active,
+.link:focus {
+  outline: 0.15rem solid black;
+  border-radius: 4px;
+}
+
+.app:hover {
+  cursor: pointer;
+}
+
+.app:hover::after {
+  transform: translate(8px, -18px);
+}
+
+#links h2 {
+  color: #e95379;
+  border-bottom: 0.3rem solid black;
+  border-radius: 1px;
+}
